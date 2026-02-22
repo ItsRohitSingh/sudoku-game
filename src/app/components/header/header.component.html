@@ -1,0 +1,33 @@
+<header class="header glass-panel" *ngIf="gameState$ | async as state">
+  <div class="top-row">
+    <div class="title-area">
+      <h1>Sudoku</h1>
+      <span class="difficulty-badge" [ngClass]="state.difficulty">{{ state.difficulty }}</span>
+    </div>
+
+    <div class="actions">
+      <div class="dropdown">
+        <button class="btn-icon" (click)="toggleMenu()">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+        <div class="dropdown-menu glass-panel" [class.show]="isMenuOpen">
+          <div class="dropdown-header">New Game</div>
+          <button (click)="setDifficulty('easy')">Easy</button>
+          <button (click)="setDifficulty('medium')">Medium</button>
+          <button (click)="setDifficulty('hard')">Hard</button>
+          <button (click)="setDifficulty('expert')">Expert</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-area">
+    <div class="progress-labels">
+      <span>Progress</span>
+      <span>{{ state.progress }}%</span>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-fill" [style.width.%]="state.progress"></div>
+    </div>
+  </div>
+</header>

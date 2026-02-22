@@ -1,0 +1,40 @@
+<div class="overlay">
+    <div class="modal glass-panel">
+        <button class="close-btn" (click)="onClose()">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <h2>How to Play Sudoku</h2>
+        <div class="tutorial-content">
+            <div class="rule">
+                <div class="rule-icon"><i class="fas fa-th"></i></div>
+                <div class="rule-text">
+                    <h3>The Grid</h3>
+                    <p>Sudoku is played on a grid of 9 x 9 spaces. Within the rows and columns are 9 "squares" (made up
+                        of 3 x 3 spaces).</p>
+                </div>
+            </div>
+
+            <div class="rule">
+                <div class="rule-icon"><i class="fas fa-sort-numeric-up"></i></div>
+                <div class="rule-text">
+                    <h3>The Rules</h3>
+                    <p>Each row, column and square (9 spaces each) needs to be filled out with the numbers 1-9, without
+                        repeating any numbers within the row, column or square.</p>
+                </div>
+            </div>
+
+            <div class="rule">
+                <div class="rule-icon"><i class="fas fa-mouse-pointer"></i></div>
+                <div class="rule-text">
+                    <h3>Controls</h3>
+                    <p>Click a cell, then use your <strong>keyboard</strong> (1-9) or the <strong>on-screen
+                            pinpad</strong> to enter numbers. Use the arrow keys to navigate. Press
+                        <strong>Delete</strong> or <strong>Backspace</strong> to erase.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-primary mt-4" (click)="onClose()">Got It!</button>
+    </div>
+</div>

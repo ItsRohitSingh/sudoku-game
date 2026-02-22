@@ -1,0 +1,73 @@
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--cell-bg);
+    color: var(--text-primary);
+    border-right: 1px solid var(--cell-border);
+    border-bottom: 1px solid var(--cell-border);
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+/* Thicker borders for subgrids handled by BoardComponent */
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cell.given {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.cell:not(.given) {
+    color: var(--accent-light);
+    /* fallback */
+    color: #60a5fa;
+    /* A nice light blue for user input */
+}
+
+.cell.related {
+    background: var(--cell-highlight);
+}
+
+.cell.same-number {
+    background: var(--cell-same-number);
+    font-weight: 700;
+}
+
+.cell.selected {
+    background: var(--cell-selected) !important;
+}
+
+.cell.error {
+    color: var(--error-color);
+    background: var(--error-bg);
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+}

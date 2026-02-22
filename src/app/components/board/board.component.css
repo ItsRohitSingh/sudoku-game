@@ -1,0 +1,33 @@
+.board {
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, var(--cell-size));
+    grid-template-rows: repeat(9, var(--cell-size));
+    background: var(--panel-border);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+/* Add thicker borders to delineate 3x3 grids */
+app-cell.border-right ::ng-deep .cell {
+    border-right: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+app-cell.border-bottom ::ng-deep .cell {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Hide right/bottom borders for the edges since the container handles it */
+app-cell:nth-child(9n) ::ng-deep .cell {
+    border-right: none;
+}
+
+app-cell:nth-child(n+73) ::ng-deep .cell {
+    border-bottom: none;
+}

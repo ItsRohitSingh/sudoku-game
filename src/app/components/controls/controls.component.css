@@ -1,0 +1,69 @@
+.controls {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tools {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tool-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.tool-btn i {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.tool-btn:hover i {
+    background: var(--accent-light);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.tool-btn:hover {
+    color: var(--text-primary);
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0.5rem;
+}
+
+.num-btn {
+    aspect-ratio: 1;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.num-btn:hover {
+    background: var(--accent-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .numpad {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

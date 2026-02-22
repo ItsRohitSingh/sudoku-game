@@ -1,0 +1,13 @@
+<div class="overlay" *ngIf="(gameState$ | async)?.isWon">
+    <div class="modal glass-panel">
+        <div class="icon-container">
+            <i class="fas fa-trophy"></i>
+        </div>
+        <h2>Congratulations!</h2>
+        <p>You've successfully solved this puzzle.</p>
+
+        <button class="btn-primary mt-4" (click)="onNextPuzzle()">
+            Next Puzzle <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+    </div>
+</div>

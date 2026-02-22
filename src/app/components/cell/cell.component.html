@@ -1,0 +1,4 @@
+<div class="cell" [class.given]="cell.isGiven" [class.selected]="cell.isSelected" [class.related]="cell.isRelated"
+    [class.same-number]="cell.isSameNumber" [class.error]="cell.isError" (click)="onClick()">
+    <span class="value" *ngIf="cell.value !== null">{{ cell.value }}</span>
+</div>

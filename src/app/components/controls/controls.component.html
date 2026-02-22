@@ -1,0 +1,17 @@
+<div class="controls glass-panel">
+    <div class="tools">
+        <button class="tool-btn" (click)="onErase()">
+            <i class="fas fa-eraser"></i>
+            <span>Erase</span>
+        </button>
+        <button class="tool-btn" (click)="onHint()">
+            <i class="fas fa-lightbulb"></i>
+            <span>Hint</span>
+        </button>
+    </div>
+    <div class="numpad">
+        <button class="num-btn glass-panel" *ngFor="let num of numbers" (click)="onNumberClick(num)">
+            {{ num }}
+        </button>
+    </div>
+</div>
