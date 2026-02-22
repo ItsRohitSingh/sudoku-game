@@ -1,8 +1,10 @@
 .header {
+    position: relative;
     padding: 1.25rem;
     margin-bottom: 1.5rem;
     width: 100%;
     max-width: 500px;
+    z-index: 500;
 }
 
 .top-row {
@@ -65,7 +67,7 @@ h1 {
     padding: 0.5rem;
     display: none;
     flex-direction: column;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .dropdown-menu.show {

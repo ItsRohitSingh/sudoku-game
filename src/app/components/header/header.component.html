@@ -6,8 +6,8 @@
     </div>
 
     <div class="actions">
-      <div class="dropdown">
-        <button class="btn-icon" (click)="toggleMenu()">
+      <div class="dropdown" #dropdown>
+        <button class="btn-icon" (click)="toggleMenu($event)">
           <i class="fas fa-ellipsis-v"></i>
         </button>
         <div class="dropdown-menu glass-panel" [class.show]="isMenuOpen">
